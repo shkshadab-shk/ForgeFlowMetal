@@ -1,0 +1,41 @@
+# robots.txt — ForgeFlow Metal Industries LLP
+# https://forgeflowmetal.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Block admin or private paths (add yours here if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://forgeflowmetal.com/sitemap.xml
+
+# Allow major AI crawlers to read the llms.txt file
+User-agent: GPTBot
+Allow: /llms.txt
+Allow: /
+
+User-agent: Claude-Web
+Allow: /llms.txt
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /llms.txt
+Allow: /
+
+User-agent: Google-Extended
+Allow: /llms.txt
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /llms.txt
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
