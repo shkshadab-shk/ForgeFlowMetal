@@ -2,3 +2,131 @@
   "cleanUrls": true,
   "trailingSlash": false
 }
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/Flanges.html",
+      "destination": "/pages/Flanges",
+      "permanent": true
+    },
+    {
+      "source": "/pages/pipe.html",
+      "destination": "/pages/pipe",
+      "permanent": true
+    },
+    {
+      "source": "/pages/pipefitting.html",
+      "destination": "/pages/pipefitting",
+      "permanent": true
+    },
+    {
+      "source": "/Products/weldneckflange.html",
+      "destination": "/Products/weldneckflange",
+      "permanent": true
+    },
+    {
+      "source": "/Products/HubFlanges.html",
+      "destination": "/Products/HubFlanges",
+      "permanent": true
+    },
+    {
+      "source": "/Products/outhubflanges.html",
+      "destination": "/Products/outhubflanges",
+      "permanent": true
+    },
+    {
+      "source": "/Products/plateflange.html",
+      "destination": "/Products/plateflange",
+      "permanent": true
+    },
+    {
+      "source": "/Products/sliponflange.html",
+      "destination": "/Products/sliponflange",
+      "permanent": true
+    },
+    {
+      "source": "/Products/blindflange.html",
+      "destination": "/Products/blindflange",
+      "permanent": true
+    },
+    {
+      "source": "/Products/socketweldflange.html",
+      "destination": "/Products/socketweldflange",
+      "permanent": true
+    },
+    {
+      "source": "/Products/threadedflange.html",
+      "destination": "/Products/threadedflange",
+      "permanent": true
+    },
+    {
+      "source": "/Products/reducingflange.html",
+      "destination": "/Products/reducingflange",
+      "permanent": true
+    },
+    {
+      "source": "/Products/lapjointflange.html",
+      "destination": "/Products/lapjointflange",
+      "permanent": true
+    },
+    {
+      "source": "/Products/orificeflange.html",
+      "destination": "/Products/orificeflange",
+      "permanent": true
+    },
+    {
+      "source": "/Products/industrialflange.html",
+      "destination": "/Products/industrialflange",
+      "permanent": true
+    },
+    {
+      "source": "/Products/ringjointflange.html",
+      "destination": "/Products/ringjointflange",
+      "permanent": true
+    },
+    {
+      "source": "/Products/spectacleflange.html",
+      "destination": "/Products/spectacleflange",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/xml; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/llms.txt",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}
