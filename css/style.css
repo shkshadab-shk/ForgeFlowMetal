@@ -8,7 +8,7 @@
   --white: #FFFFFF;
   --text: #1C1C1C;
   --text-mid: #444444;
-  --text-light: #777777;
+  --text-light: #595959;
   --border: #d6dcf0;
   --bg-section: #F5F7FC;
 }
@@ -26,6 +26,23 @@ body {
 
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-thumb { background: var(--navy); }
+
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--navy);
+  color: #fff;
+  padding: 10px 16px;
+  z-index: 10000;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0 0 8px 0;
+}
+.skip-link:focus {
+  left: 0;
+}
 
 /* ── TOPBAR ── */
 .topbar {
@@ -537,7 +554,7 @@ h2 .hl { color: var(--navy); }
   margin-bottom: 10px;
 }
 
-.mv-card h4 {
+.mv-card h3 {
   font-size: 16px;
   font-weight: 800;
   color: var(--navy, #1a1a8c);
@@ -748,7 +765,7 @@ footer {
   text-transform: uppercase;
 }
 
-.f-col h4 {
+.f-col h3 {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
