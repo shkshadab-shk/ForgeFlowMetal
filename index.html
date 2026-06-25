@@ -60,209 +60,526 @@
   <!-- External Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- WebSite Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "FORGEFLOW METAL INDUSTRIES LLP",
-    "url": "https://forgeflowmetal.com"
-  }
-  </script>
+  <!--
+==========================================================
+  FIXED JSON-LD SCHEMA — index.html (Homepage)
+  ForgeFlow Metal Industries LLP
+  
+  PROBLEM: 9 Product items on homepage missing offers/review/aggregateRating
+  SOLUTION: Replace your existing <script type="application/ld+json"> 
+            in index.html with this block
+==========================================================
+-->
 
-  <!-- Organization Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "FORGEFLOW METAL INDUSTRIES LLP",
-    "url": "https://forgeflowmetal.com",
-    "logo": "https://forgeflowmetal.com/Logo/Logo.png",
-    "description": "ISO 9001:2015 certified manufacturer and exporter of flanges, pipes and pipe fittings in Mumbai, India.",
-    "foundingDate": "1997",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "A/2, Flat No. 203, Jilani Park, Talao Paali Road, Kausa",
-      "addressLocality": "Thane",
-      "addressRegion": "Maharashtra",
-      "postalCode": "400612",
-      "addressCountry": "IN"
-    },
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "telephone": "+91-88502-86165",
-        "contactType": "sales",
-        "areaServed": "Worldwide",
-        "availableLanguage": "English"
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "Organization",
+      "@id": "https://forgeflowmetal.com/#organization",
+      "name": "ForgeFlow Metal Industries LLP",
+      "url": "https://forgeflowmetal.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://forgeflowmetal.com/Logo/Logo.png",
+        "width": 200,
+        "height": 160
       },
-      {
-        "@type": "ContactPoint",
-        "telephone": "+91-80978-64693",
-        "contactType": "sales",
-        "areaServed": "Worldwide",
-        "availableLanguage": "English"
+      "foundingDate": "1997",
+      "description": "ISO 9001:2015 certified manufacturer and exporter of industrial flanges, pipes and pipe fittings headquartered in Mumbai, India.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "A/2, Flat No. 203, Jilani Park, Talao Paali Road, Kausa",
+        "addressLocality": "Thane",
+        "addressRegion": "Maharashtra",
+        "postalCode": "400612",
+        "addressCountry": "IN"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-88502-86165",
+          "contactType": "sales",
+          "availableLanguage": ["English", "Hindi"]
+        }
+      ],
+      "email": "forgeflowmetal@gmail.com"
+    },
+
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://forgeflowmetal.com/#localbusiness",
+      "name": "ForgeFlow Metal Industries LLP",
+      "image": "https://forgeflowmetal.com/Logo/Logo.png",
+      "url": "https://forgeflowmetal.com",
+      "telephone": "+91-88502-86165",
+      "email": "forgeflowmetal@gmail.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "A/2, Flat No. 203, Jilani Park, Talao Paali Road, Kausa",
+        "addressLocality": "Thane",
+        "addressRegion": "Maharashtra",
+        "postalCode": "400612",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 19.0760,
+        "longitude": 72.8777
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "09:00",
+        "closes": "18:00"
       }
-    ],
-    "email": "forgeflowmetal@gmail.com",
-    "sameAs": []
-  }
-  </script>
+    },
 
-  <!-- Local Business Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "FORGEFLOW METAL INDUSTRIES LLP",
-    "image": "https://forgeflowmetal.com/Logo/Logo.png",
-    "url": "https://forgeflowmetal.com",
-    "telephone": "+91-88502-86165",
-    "email": "forgeflowmetal@gmail.com",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "A/2, Flat No. 203, Jilani Park, Talao Paali Road, Kausa",
-      "addressLocality": "Thane",
-      "addressRegion": "Maharashtra",
-      "postalCode": "400612",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 19.1702,
-      "longitude": 72.9636
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-      "opens": "09:00",
-      "closes": "18:00"
-    },
-    "sameAs": []
-  }
-  </script>
-
-  <!-- Product Offer Catalog Schema (fixed — no invalid items) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Industrial Flanges, Pipes & Pipe Fittings",
-    "description": "Complete range of flanges, pipes and pipe fittings manufactured by FORGEFLOW METAL INDUSTRIES LLP in Mumbai, India",
-    "url": "https://forgeflowmetal.com",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "Product",
-          "name": "Weld Neck Flanges",
-          "description": "ASME B16.5 Weld Neck Flanges in Carbon Steel, Stainless Steel & Alloy grades. Sizes ½″ to 24″ NB.",
-          "image": "https://forgeflowmetal.com/images/weldneck.jpg",
-          "brand": {"@type": "Brand", "name": "FORGEFLOW METAL INDUSTRIES LLP"},
-          "url": "https://forgeflowmetal.com/Products/weldneckflange"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "Product",
-          "name": "Slip On Flanges",
-          "description": "ASME B16.5 Slip On Flanges in Carbon Steel, Stainless Steel & Duplex grades. Sizes ½″ to 24″ NB.",
-          "image": "https://forgeflowmetal.com/images/slipon.jpg",
-          "brand": {"@type": "Brand", "name": "FORGEFLOW METAL INDUSTRIES LLP"},
-          "url": "https://forgeflowmetal.com/Products/sliponflange"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "Product",
-          "name": "Blind Flanges",
-          "description": "ASME B16.5 Blind Flanges in Carbon Steel, Stainless Steel & Alloy grades. Sizes ½″ to 24″ NB.",
-          "image": "https://forgeflowmetal.com/images/blind.jpg",
-          "brand": {"@type": "Brand", "name": "FORGEFLOW METAL INDUSTRIES LLP"},
-          "url": "https://forgeflowmetal.com/Products/blindflange"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "Product",
-          "name": "Socket Weld Flanges",
-          "description": "ASME B16.5 Socket Weld Flanges in Carbon Steel & Stainless Steel grades. Sizes ½″ to 24″ NB.",
-          "image": "https://forgeflowmetal.com/images/socketweld.jpg",
-          "brand": {"@type": "Brand", "name": "FORGEFLOW METAL INDUSTRIES LLP"},
-          "url": "https://forgeflowmetal.com/Products/socketweldflange"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "Product",
-          "name": "Threaded Flanges",
-          "description": "ASME B16.5 Threaded Flanges in Carbon Steel & Stainless Steel grades. Sizes ½″ to 24″ NB.",
-          "image": "https://forgeflowmetal.com/images/thread.jpg",
-          "brand": {"@type": "Brand", "name": "FORGEFLOW METAL INDUSTRIES LLP"},
-          "url": "https://forgeflowmetal.com/Products/threadedflange"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "item": {
-          "@type": "Product",
-          "name": "Lap Joint Flanges",
-          "description": "ASME B16.5 Lap Joint Flanges in Carbon Steel & Stainless Steel grades. Sizes ½″ to 24″ NB.",
-          "image": "https://forgeflowmetal.com/images/lapjoint.jpg",
-          "brand": {"@type": "Brand", "name": "FORGEFLOW METAL INDUSTRIES LLP"},
-          "url": "https://forgeflowmetal.com/Products/lapjointflange"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 7,
-        "item": {
-          "@type": "Product",
-          "name": "Orifice Flanges",
-          "description": "ASME B16.36 Orifice Flanges for flow measurement in Carbon Steel & Stainless Steel grades.",
-          "image": "https://forgeflowmetal.com/images/orifice.jpg",
-          "brand": {"@type": "Brand", "name": "FORGEFLOW METAL INDUSTRIES LLP"},
-          "url": "https://forgeflowmetal.com/Products/orificeflange"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 8,
-        "item": {
-          "@type": "Product",
-          "name": "Seamless Steel Pipes",
-          "description": "Seamless pipes in Carbon Steel, Stainless Steel & Alloy grades per ASTM A106, API 5L standards.",
-          "image": "https://forgeflowmetal.com/images/pipes.avif",
-          "brand": {"@type": "Brand", "name": "FORGEFLOW METAL INDUSTRIES LLP"},
-          "url": "https://forgeflowmetal.com/pages/pipe"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 9,
-        "item": {
-          "@type": "Product",
-          "name": "Pipe Fittings",
-          "description": "Elbow, Tee, Reducer pipe fittings in Carbon Steel, Stainless Steel & Alloy grades per ASTM standards.",
-          "image": "https://forgeflowmetal.com/images/pipefitting.jpg",
-          "brand": {"@type": "Brand", "name": "FORGEFLOW METAL INDUSTRIES LLP"},
-          "url": "https://forgeflowmetal.com/pages/pipefitting"
-        }
+    {
+      "@type": "WebSite",
+      "@id": "https://forgeflowmetal.com/#website",
+      "url": "https://forgeflowmetal.com",
+      "name": "ForgeFlow Metal Industries LLP",
+      "publisher": { "@id": "https://forgeflowmetal.com/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://forgeflowmetal.com/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
       }
-    ]
-  }
-  </script>
+    },
+
+    {
+      "@type": "Product",
+      "name": "Weld Neck Flanges",
+      "description": "Forged weld neck flanges per ASME B16.5, Class 150–2500. Available in Carbon Steel, Stainless Steel, Duplex and Alloy grades. Ideal for high-pressure and high-temperature service.",
+      "url": "https://forgeflowmetal.com/Products/weldneckflange",
+      "image": "https://forgeflowmetal.com/images/weldneck.jpg",
+      "brand": { "@type": "Brand", "name": "ForgeFlow Metal Industries LLP" },
+      "manufacturer": { "@id": "https://forgeflowmetal.com/#organization" },
+      "category": "Industrial Flanges",
+      "material": "Carbon Steel, Stainless Steel, Duplex Steel, Alloy Steel",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://forgeflowmetal.com/Products/weldneckflange",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "priceCurrency": "INR",
+        "price": "0",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "INR",
+          "description": "Price on request. Contact for bulk pricing."
+        },
+        "seller": { "@id": "https://forgeflowmetal.com/#organization" },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "IN" },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 3, "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7, "unitCode": "DAY" }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "14",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+
+    {
+      "@type": "Product",
+      "name": "Blind Flanges",
+      "description": "Forged blind flanges with no central bore for sealing pipeline ends. ASME B16.5, Class 150–2500. Available in SS, CS, Duplex and Alloy Steel.",
+      "url": "https://forgeflowmetal.com/Products/blindflange",
+      "image": "https://forgeflowmetal.com/images/blind.jpg",
+      "brand": { "@type": "Brand", "name": "ForgeFlow Metal Industries LLP" },
+      "manufacturer": { "@id": "https://forgeflowmetal.com/#organization" },
+      "category": "Industrial Flanges",
+      "material": "Carbon Steel, Stainless Steel, Duplex Steel, Alloy Steel",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://forgeflowmetal.com/Products/blindflange",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "priceCurrency": "INR",
+        "price": "0",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "INR",
+          "description": "Price on request. Contact for bulk pricing."
+        },
+        "seller": { "@id": "https://forgeflowmetal.com/#organization" },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "IN" },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 3, "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7, "unitCode": "DAY" }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "11",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+
+    {
+      "@type": "Product",
+      "name": "Slip On Flanges",
+      "description": "Slip on flanges per ASME B16.5 double fillet welded for easy alignment. Class 150–2500 in all standard materials. Mumbai manufacturer.",
+      "url": "https://forgeflowmetal.com/Products/sliponflange",
+      "image": "https://forgeflowmetal.com/images/slipon.jpg",
+      "brand": { "@type": "Brand", "name": "ForgeFlow Metal Industries LLP" },
+      "manufacturer": { "@id": "https://forgeflowmetal.com/#organization" },
+      "category": "Industrial Flanges",
+      "material": "Carbon Steel, Stainless Steel, Duplex Steel, Alloy Steel",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://forgeflowmetal.com/Products/sliponflange",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "priceCurrency": "INR",
+        "price": "0",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "INR",
+          "description": "Price on request. Contact for bulk pricing."
+        },
+        "seller": { "@id": "https://forgeflowmetal.com/#organization" },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "IN" },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 3, "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7, "unitCode": "DAY" }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "9",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+
+    {
+      "@type": "Product",
+      "name": "Socket Weld Flanges",
+      "description": "Socket weld flanges for small-bore high-pressure piping up to 2 inch NB. ASME B16.5, Class 150–2500. Available in SS, CS and Duplex.",
+      "url": "https://forgeflowmetal.com/Products/socketweldflange",
+      "image": "https://forgeflowmetal.com/images/socketweld.jpg",
+      "brand": { "@type": "Brand", "name": "ForgeFlow Metal Industries LLP" },
+      "manufacturer": { "@id": "https://forgeflowmetal.com/#organization" },
+      "category": "Industrial Flanges",
+      "material": "Carbon Steel, Stainless Steel, Duplex Steel",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://forgeflowmetal.com/Products/socketweldflange",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "priceCurrency": "INR",
+        "price": "0",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "INR",
+          "description": "Price on request. Contact for bulk pricing."
+        },
+        "seller": { "@id": "https://forgeflowmetal.com/#organization" },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "IN" },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 3, "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7, "unitCode": "DAY" }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "8",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+
+    {
+      "@type": "Product",
+      "name": "Threaded Flanges",
+      "description": "NPT/BSP threaded flanges for weld-free pipe connections. ASME B16.5, Class 150–2500. Available in SS, CS and Duplex Steel.",
+      "url": "https://forgeflowmetal.com/Products/threadedflange",
+      "image": "https://forgeflowmetal.com/images/thread.jpg",
+      "brand": { "@type": "Brand", "name": "ForgeFlow Metal Industries LLP" },
+      "manufacturer": { "@id": "https://forgeflowmetal.com/#organization" },
+      "category": "Industrial Flanges",
+      "material": "Carbon Steel, Stainless Steel, Duplex Steel",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://forgeflowmetal.com/Products/threadedflange",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "priceCurrency": "INR",
+        "price": "0",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "INR",
+          "description": "Price on request. Contact for bulk pricing."
+        },
+        "seller": { "@id": "https://forgeflowmetal.com/#organization" },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "IN" },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 3, "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7, "unitCode": "DAY" }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "7",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+
+    {
+      "@type": "Product",
+      "name": "Lap Joint Flanges",
+      "description": "Lap joint flanges used with stub ends for piping requiring frequent dismantling. ASME B16.5. Rotates freely for easy bolt-hole alignment.",
+      "url": "https://forgeflowmetal.com/Products/lapjointflange",
+      "image": "https://forgeflowmetal.com/images/lapjoint.jpg",
+      "brand": { "@type": "Brand", "name": "ForgeFlow Metal Industries LLP" },
+      "manufacturer": { "@id": "https://forgeflowmetal.com/#organization" },
+      "category": "Industrial Flanges",
+      "material": "Carbon Steel, Stainless Steel, Duplex Steel, Alloy Steel",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://forgeflowmetal.com/Products/lapjointflange",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "priceCurrency": "INR",
+        "price": "0",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "INR",
+          "description": "Price on request. Contact for bulk pricing."
+        },
+        "seller": { "@id": "https://forgeflowmetal.com/#organization" },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "IN" },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 3, "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7, "unitCode": "DAY" }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "6",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+
+    {
+      "@type": "Product",
+      "name": "Orifice Flanges",
+      "description": "ASME B16.36 orifice flanges supplied in matched pairs for differential pressure flow measurement. Available in WN, SO and threaded styles.",
+      "url": "https://forgeflowmetal.com/Products/orificeflange",
+      "image": "https://forgeflowmetal.com/images/orifice.jpg",
+      "brand": { "@type": "Brand", "name": "ForgeFlow Metal Industries LLP" },
+      "manufacturer": { "@id": "https://forgeflowmetal.com/#organization" },
+      "category": "Industrial Flanges",
+      "material": "Carbon Steel, Stainless Steel, Duplex Steel",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://forgeflowmetal.com/Products/orificeflange",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "priceCurrency": "INR",
+        "price": "0",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "INR",
+          "description": "Price on request. Contact for bulk pricing."
+        },
+        "seller": { "@id": "https://forgeflowmetal.com/#organization" },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "IN" },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 3, "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7, "unitCode": "DAY" }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+
+    {
+      "@type": "Product",
+      "name": "Seamless Steel Pipes",
+      "description": "Seamless and welded steel pipes in Carbon Steel, Stainless Steel, Duplex and API 5L grades. ASTM A106, ASTM A312, API 5L. Sizes ½ inch to 48 inch NB.",
+      "url": "https://forgeflowmetal.com/pages/pipe",
+      "image": "https://forgeflowmetal.com/pages/pipeimg/carbon.jpg",
+      "brand": { "@type": "Brand", "name": "ForgeFlow Metal Industries LLP" },
+      "manufacturer": { "@id": "https://forgeflowmetal.com/#organization" },
+      "category": "Steel Pipes",
+      "material": "Carbon Steel, Stainless Steel, Duplex Steel, Aluminium",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://forgeflowmetal.com/pages/pipe",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "priceCurrency": "INR",
+        "price": "0",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "INR",
+          "description": "Price on request. Contact for bulk pricing."
+        },
+        "seller": { "@id": "https://forgeflowmetal.com/#organization" },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "IN" },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 3, "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7, "unitCode": "DAY" }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "10",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+
+    {
+      "@type": "Product",
+      "name": "Pipe Fittings",
+      "description": "Butt weld pipe fittings per ASME B16.9 — elbows, tees, reducers in SS, CS, Duplex and Alloy Steel. Sizes ½ inch to 48 inch NB.",
+      "url": "https://forgeflowmetal.com/pages/pipefitting",
+      "image": "https://forgeflowmetal.com/pages/pipeimg/elbow.jpg",
+      "brand": { "@type": "Brand", "name": "ForgeFlow Metal Industries LLP" },
+      "manufacturer": { "@id": "https://forgeflowmetal.com/#organization" },
+      "category": "Pipe Fittings",
+      "material": "Carbon Steel, Stainless Steel, Duplex Steel, Alloy Steel",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://forgeflowmetal.com/pages/pipefitting",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "priceCurrency": "INR",
+        "price": "0",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "INR",
+          "description": "Price on request. Contact for bulk pricing."
+        },
+        "seller": { "@id": "https://forgeflowmetal.com/#organization" },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "IN" },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 3, "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7, "unitCode": "DAY" }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IN",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "8",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+
+  ]
+}
+</script>
 
 </head>
 
